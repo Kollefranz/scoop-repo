@@ -14,5 +14,11 @@
   "autoupdate": {
     "url": "https://github.com/Kvan7/Exiled-Exchange-2/releases/download/v$version/Exiled-Exchange-2-$version.exe"
   },
-  "checkver": "github"
+  "checkver": "github",
+  "pre_install": [
+    "Get-Process '*exiled*exchange*' | Stop-Process"
+  ],
+  "pre_uninstall": [
+    "Get-Process '*exiled*exchange*' | Stop-Process"
+  ]
 }
