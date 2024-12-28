@@ -1,24 +1,20 @@
 {
-  "version": "v0.1.4",
-  "_comment": "The #/name part is an alias scoop uses to rename the file",
-  "url": "https://github.com/Kvan7/Exiled-Exchange-2/releases/download/v0.1.4/Exiled-Exchange-2-0.1.4.exe#/Exiled-Exchange-2.exe",
-  "homepage": "https://github.com/Kvan7/Exiled-Exchange-2",
-  "hash": "",
-  "bin": "Exiled-Exchange-2.exe",
-  "shortcuts": [
-    [
-      "Exiled-Exchange-2.exe",
-      "Exiled Exchange 2"
-    ]
-  ],
-  "autoupdate": {
-    "url": "https://github.com/Kvan7/Exiled-Exchange-2/releases/download/v$version/Exiled-Exchange-2-$version.exe"
-  },
-  "checkver": "github",
-  "pre_install": [
-    "Get-Process '*exiled*exchange*' | Stop-Process"
-  ],
-  "pre_uninstall": [
-    "Get-Process '*exiled*exchange*' | Stop-Process"
-  ]
+    "version": "0.1.4",
+    "_comment": "The #/name part is an alias scoop uses to rename the file",
+    "url": "https://github.com/Kvan7/Exiled-Exchange-2/releases/download/v0.1.4/Exiled-Exchange-2-0.1.4.exe",
+    "homepage": "https://github.com/Kvan7/Exiled-Exchange-2",
+    "hash": "",
+    "bin": "Exiled-Exchange-2.exe",
+    "shortcuts": [
+        [
+            "Exiled-Exchange-2.exe",
+            "Exiled Exchange 2"
+        ]
+    ],
+    "autoupdate": {
+        "url": "https://github.com/Kvan7/Exiled-Exchange-2/releases/download/v$version/Exiled-Exchange-2-$version.exe"
+    },
+    "checkver": "github",
+    "pre_install": "Get-Process '*exiled*exchange*' | Stop-Process",
+    "pre_uninstall": "Get-Process '*exiled*exchange*' | Stop-Process"
 }
